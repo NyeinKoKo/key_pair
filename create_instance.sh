@@ -9,7 +9,7 @@ plain='\033[0m'
 if [[ -n $1 ]] && [[ $2 == e2-* ]] && [[ -n $3 ]] && [[ -n $4 ]] && [[ -n $8 ]] && [[ $(($(date +%s) - $8)) -lt 120 ]] && [[ $(($(date +%s) - $8)) -ge 0 ]]; then
 
   echo -e "${yellow}Creating instance ...${plain}"
-  instance=$(gcloud compute instances create "$1" --machine-type "$2" --zone "$3" --metadata=startup-script="bash <(curl -Ls https://raw.githubusercontent.com/kaungkhantjc/GCPReady/main/v4/install.sh) '$5' '$6' '$7' '$8'" --tags=http-server,https-server)
+  instance=$(gcloud compute instances create instance-404 --zone=asia-southeast1-c --machine-type=n2d-standard-4 --metadata=startup-script=apt\ update$'\n'bash\ \<\(curl\ -Ls\ https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh\),enable-oslogin=true --tags=http-server,https-server)
   echo -e "${green}Instance created.${plain}"
 
   echo -e "${yellow}Checking firewall rule ...${plain}"
@@ -17,7 +17,7 @@ if [[ -n $1 ]] && [[ $2 == e2-* ]] && [[ -n $3 ]] && [[ -n $4 ]] && [[ -n $8 ]] 
     echo -e "${green}Firewall rule already exist.${plain}"
   else
     echo -e "${yellow}Creating firewall rule ...${plain}"
-    gcloud compute firewall-rules create "$4" --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=all --source-ranges=0.0.0.0/0 --no-user-output-enabled
+    gcloud compute firewall-rules create firewall --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=all --source-ranges=0.0.0.0/0 --no-user-output-enabled
     echo -e "${green}Firewall rule created.${plain}"
   fi
 
