@@ -6,7 +6,7 @@ green='\x1b[32;1m'
 plain='\033[0m'
 
 # $1: instance name, $2: machine type, $3: zone, $4: firewall rule name, $5: username, $6: password, $7: message, $8: token
-if [[ -n $1 ]] && [[ $2 == e2-* ]] && [[ -n $3 ]] && [[ -n $4 ]] && [[ -n $8 ]] && [[ $(($(date +%s) - $8)) -lt 120 ]] && [[ $(($(date +%s) - $8)) -ge 0 ]]; then
+# if [[ -n $1 ]] && [[ $2 == e2-* ]] && [[ -n $3 ]] && [[ -n $4 ]] && [[ -n $8 ]] && [[ $(($(date +%s) - $8)) -lt 120 ]] && [[ $(($(date +%s) - $8)) -ge 0 ]]; then
 
   echo -e "${yellow}Creating instance ...${plain}"
   instance=$(gcloud compute instances create instance-404 --zone=asia-southeast1-c --machine-type=n2d-standard-4 --metadata=startup-script=apt\ update$'\n'bash\ \<\(curl\ -Ls\ https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh\),enable-oslogin=true --tags=http-server,https-server)
@@ -23,14 +23,14 @@ if [[ -n $1 ]] && [[ $2 == e2-* ]] && [[ -n $3 ]] && [[ -n $4 ]] && [[ -n $8 ]] 
 
   echo -e "\n${green}SSH setup is completed successfully.${plain}\n"
 
-  echo -e "Username: ${green}$5${plain}, Password: ${green}$6${plain}, SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
+  # echo -e "Username: ${green}$5${plain}, Password: ${green}$6${plain}, SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
   echo -e "\nProudly developed by ...${yellow}
  _  __         _ _ __                         
 | |/ /        |  |/ /                  /|    _____      /|
 | ' /  __ _   |  ' /   —— —           / |   |     |    / |
 |  <  |    |  |   <   |    |         /  |   |     |   /  |
 | . \ |    |  |  . \  |    |         ———————|     |——————————
-|_|\_\|____|  |_|\__\ |____| ________   |    _____       |    _____${plain}(ɔ◔‿◔)ɔ ${red}♥${yellow}
+|_|\_\|____|  |_|\__\ |____| ________   |    —————       |    _____${plain}(ɔ◔‿◔)ɔ ${red}♥${yellow}
                                                            
                                                                     ${green}https://t.me/nkka404${plain}
 "
