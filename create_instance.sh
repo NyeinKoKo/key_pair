@@ -25,12 +25,12 @@ if [[ -n $1 ]] && [[ $2 == e2-* ]] && [[ -n $3 ]] && [[ -n $4 ]] && [[ -n $8 ]] 
 
   echo -e "Username: ${green}$5${plain}, Password: ${green}$6${plain}, SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
   echo -e "\nProudly developed by ...${yellow}
- _  __         _ _ _                         
-| |/ /        |     |        
-| ' /  __ _   |     .      (╬ಠ益ಠ)  ʕ　·ᴥʔ  ❃ႣᄎႣ❃ 
-|  <  |    |  |
-| . \ |    |  |
-|_|\_\|____|  |                                    ${plain}(ɔ◔‿◔)ɔ ${red}♥${yellow}
+ _  __         _ _ __                         
+| |/ /        |  |/ /                  /|    _____      /|
+| ' /  __ _   |  ' /   —— —           / |   |     |    / |
+|  <  |    |  |   <   |    |         /  |   |     |   /  |
+| . \ |    |  |  . \  |    |         ———————|     |——————————
+|_|\_\|____|  |_|\__\ |____| ________   |    _____       |    _____${plain}(ɔ◔‿◔)ɔ ${red}♥${yellow}
                                                            
                                                                     ${green}https://t.me/nkka404${plain}
 "
