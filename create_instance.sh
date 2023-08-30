@@ -24,7 +24,7 @@ plain='\033[0m'
   echo -e "\n${green}Thank you for useing....🥵${plain}\n"
 
   # echo -e "Username: ${green}$5${plain}, Password: ${green}$6${plain}, SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
-  echo -e "SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
+  # echo -e "SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
   echo -e "\nProudly developed by ...${yellow}
  _  __         _ _ __                         
 | |/ /        |  |/ /                  /|    _____      /|
