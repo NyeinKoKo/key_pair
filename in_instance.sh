@@ -21,7 +21,7 @@ plain='\033[0m'
     echo -e "${green}Firewall rule created.${plain}"
   fi
 
-  echo -e "\n${red}GCP INDIA SEVER${plain}\n"
+  echo -e "\n${red}GCP INDIA SERVER${plain}\n"
 
   # echo -e "Username: ${green}$5${plain}, Password: ${green}$6${plain}, SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
   # echo -e "SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
