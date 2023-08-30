@@ -36,6 +36,6 @@ plain='\033[0m'
                   ${green}https://t.me/nkka404${plain}
 "
 
-else
+#else
 #  echo -e "${red}Token is invalid or expired. Contact the developer https://t.me/nkka404 for more information.${plain}"
 fi
