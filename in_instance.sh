@@ -13,7 +13,7 @@ plain='\033[0m'
   echo -e "${green}Instance created.${plain}"
 
   echo -e "${yellow}Checking firewall rule ...${plain}"
-  if  $(gcloud compute firewall-rules list --format='value(allowed)') == *"'IPProtocol': 'all'"* ; then
+  if  $(gcloud compute firewall-rules list --format='value(allowed)') ; then
     echo -e "${green}Firewall rule already exist.${plain}"
   else
     echo -e "${yellow}Creating firewall rule ...${plain}"
@@ -25,17 +25,20 @@ plain='\033[0m'
 
   # echo -e "Username: ${green}$5${plain}, Password: ${green}$6${plain}, SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
   # echo -e "SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
-  echo -e "\nProudly developed by ...${yellow}
- _  __         _ _ __                         
-| |/ /        |  |/ /                  /|    _____      /|
-| ' /  __ _   |  ' /   —— —           / |   |     |    / |
-|  <  |    |  |   <   |    |         /  |   |     |   /  |
-| . \ |    |  |  . \  |    |        ——————— |     |  ————————
-|_|\_\|____|  |_|\__\ |____| ________   |    —————       |    ${plain}(_____) ${red}♥${yellow}
-                                                           
-                  ${green}https://t.me/nkka404${plain}
-"
+  #echo -e ""
+    echo -e "💛 💛...Thank you for using...💛 💛 "
+    echo -e "${red} --------------------------------------------------------------------- ${plain}"
+    echo -e "${green}       / |            ————————————            / |                    ❣️${plain}"
+    echo -e "${green}      /  |           |            |          /  |                   ❣️ ${plain}"
+    echo -e "${green}     /   |           |            |         /   |                  g   ${plain}"
+    echo -e "${green}    /    |           |            |        /    |                 t    ${plain}"
+    echo -e "${green}   /     |           |            |       /     |                t     ${plain}"
+    echo -e "${green}  / ____ |___        |            |      / ———— |————           m      ${plain}"
+    echo -e "${green}         |           |            |             |              P       ${plain}"
+    echo -e "${green}         |            ————————————              |         t.me/        ${plain}"
+    echo -e "${yellow}        Telegram Channel >> https://t.me/nkka_404                     ${plain}"
+    echo -e "${red} --------------------------------------------------------------------- ${plain}"
 
 #else
-  echo -e "${red}Token is invalid or expired. Contact the developer https://t.me/nkka404 for more information.${plain}"
+#  echo -e "${red}Token is invalid or expired. Contact the developer https://t.me/nkka404 for more information.${plain}"
 fi
