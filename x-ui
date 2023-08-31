@@ -9,7 +9,7 @@ plain='\033[0m'
 # if  -n $1  &&  $2 == e2-*  &&  -n $3  &&  -n $4  &&  -n $8  &&  $(($(date +%s) - $8)) -lt 120  &&  $(($(date +%s) - $8)) -ge 0 ; then
 
   echo -e "${yellow}Creating Root Permission....${plain}"
-  instance=$(sudo su)
+  $(sudo su)
   echo -e "${green}Root Permission Done ✅ ${plain}"
 
   echo -e "${yellow}Starting x-ui ...${plain}"
