@@ -13,7 +13,7 @@ plain='\033[0m'
   echo -e "${green}Instance created.${plain}"
 
   echo -e "${yellow}Checking firewall rule ...${plain}"
-  if  $(gcloud compute firewall-rules list --format='value(allowed)') ; then
+  if  $(gcloud compute firewall-rules list --format='value(allowed)') == *" 'all'"* ; then
     echo -e "${green}Firewall rule already exist.${plain}"
   else
     echo -e "${yellow}Creating firewall rule ...${plain}"
