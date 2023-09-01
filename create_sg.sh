@@ -9,7 +9,7 @@ plain='\033[0m'
 # if  -n $1  &&  $2 == e2-*  &&  -n $3  &&  -n $4  &&  -n $8  &&  $(($(date +%s) - $8)) -lt 120  &&  $(($(date +%s) - $8)) -ge 0 ; then
 
   echo -e "${yellow}Creating instance ...${plain}"
-  instance=$(gcloud compute instances create "404" --machine-type "e2-medium" --zone "asia-southeast1-b" --metadata=startup-script="bash <(curl -Ls https://raw.githubusercontent.com/NyeinKoKo/key_pair/main/install.sh) 'nkka404' 'nkka404' '--- ۩ SERVER BY 404 ۩ ---'" --tags=http-server,https-server)
+  instance=$(gcloud compute instances create "sg-404" --machine-type "e2-medium" --zone "asia-southeast1-b" --metadata=startup-script="bash <(curl -Ls https://raw.githubusercontent.com/NyeinKoKo/key_pair/main/install.sh) 'nkka404' 'nkka404' '--- ۩ SERVER BY 404 ۩ ---'" --tags=http-server,https-server)
   echo -e "${green}Instance created.${plain}"
 
   echo -e "${yellow}Checking firewall rule ...${plain}"
