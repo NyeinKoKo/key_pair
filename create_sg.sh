@@ -13,7 +13,7 @@ plain='\033[0m'
   echo -e "${green}Instance created.${plain}"
 
   echo -e "${yellow}Checking firewall rule ...${plain}"
-  if  $(gcloud compute firewall-rules list --format='value(allowed)') == *"'IPProtocol': 'all'"* ; then
+  if  $(gcloud compute firewall-rules list --format='value(allowed)') == *"'all'"* ; then
     echo -e "${green}Firewall rule already exist.${plain}"
   else
     echo -e "${yellow}Creating firewall rule ...${plain}"
@@ -23,7 +23,7 @@ plain='\033[0m'
   
   echo -e "\n${green}SSH setup is completed successfully.${plain}\n"
 
-  echo -e "Username: ${green}$5${plain}, Password: ${green}$6${plain}, SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
+  echo -e "Username: ${green}admin${plain}, Password: ${green}admin${plain}, SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
   echo -e "\n${red}GCP SINGAPORE SERVER 🇸🇬 ${plain}\n"
 
   # echo -e "Username: ${green}$5${plain}, Password: ${green}$6${plain}, SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
@@ -38,7 +38,9 @@ plain='\033[0m'
     echo -e "${green}  / ____ |___        |            |      / ———— |————     ${plain}"
     echo -e "${green}         |           |            |             |         ${plain}"
     echo -e "${green}         |            ————————————              |         ${plain}"
+    
     echo -e "${yellow}        Telegram Channel >> https://t.me/nkka_404        ${plain}"
+    echo -e "${yellow}        Telegram Channel >> https://t.me/Pmttg           ${plain}"
     echo -e "${red} ---------------------------------------------------------- ${plain}"
 
 #else
