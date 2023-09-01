@@ -6,14 +6,15 @@ green='\x1b[32;1m'
 plain='\033[0m'
 
 # $1: instance name, $2: machine type, $3: zone, $4: firewall rule name, $5: username, $6: password, $7: message, $8: token
-# if  -n $1  &&  $2 == e2-*  &&  -n $3  &&  -n $4  &&  -n $8  &&  $(($(date +%s) - $8)) -lt 120  &&  $(($(date +%s) - $8)) -ge 0 ; then
+# if [[ -n $1 ]] && [[ $2 == e2-* ]] && [[ -n $3 ]] && [[ -n $4 ]] && [[ -n $8 ]] && [[ $(($(date +%s) - $8)) -lt 120 ]] && [[ $(($(date +%s) - $8)) -ge 0 ]]; then
+#if [[ -n cluster-404-m ]] && [[ $2 == e2-standard-4 ]] && [[ -n asia-southeast1-b ]] && [[ -n firewall ]] && [[ -n 404 ]] && [[ $(($(date +%s) - 404)) -lt 120 ]] && [[ $(($(date +%s) - 404)) -ge 0 ]]; then
 
   echo -e "${yellow}Creating instance ...${plain}"
-  instance=$(gcloud dataproc clusters create cluster-404 --enable-component-gateway --region northeast1 --zone northeast1-b --single-node --master-machine-type e2-standard-4 --master-boot-disk-size 500 --image-version 2.0-ubuntu18)
+  instance=$(gcloud dataproc clusters create cluster-404 --enable-component-gateway --region asia-northeast1 --zone asia-northeast1-b --single-node --master-machine-type e2-standard-4 --master-boot-disk-size 500 --image-version 2.0-ubuntu18)
   echo -e "${green}Instance created.${plain}"
 
   echo -e "${yellow}Checking firewall rule ...${plain}"
-  if  $(gcloud compute firewall-rules list --format='value(allowed)') == *"'all'"* ]]; then
+  if [[ $(gcloud compute firewall-rules list --format='value(allowed)') == *"'all'"* ]]; then
     echo -e "${green}Firewall rule already exist.${plain}"
   else
     echo -e "${yellow}Creating firewall rule ...${plain}"
@@ -23,7 +24,7 @@ plain='\033[0m'
 
   echo -e "\n${red}GCP JAPAN SERVER 🇯🇵 ${plain}\n"
 
-  # echo -e "Username: ${green}$5${plain}, Password: ${green}$6${plain}, SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
+ # echo -e "Username: ${green}$5${plain}, Password: ${green}$6${plain}, SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
   # echo -e "SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
   echo -e "💛 💛...Thank you for using...💛 💛 "
     echo -e "${red} --------------------------------------------------------------------- ${plain}"
