@@ -40,4 +40,4 @@ plain='\033[0m'
 
 #else
 #  echo -e "${red}Token is invalid or expired. Contact the developer https://t.me/nkka404 for more information.${plain}"
-fi
+#fi
