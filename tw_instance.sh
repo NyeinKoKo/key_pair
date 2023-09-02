@@ -25,8 +25,8 @@ plain='\033[0m'
   echo -e "\n${red}GCP TAIWAN SERVER 🇹🇼 ${plain}\n"
 
  # echo -e "Username: ${green}$5${plain}, Password: ${green}$6${plain}, SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
-  # echo -e "SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
-  echo ""
+ # echo -e "SSH Host :  ${green}$(grep -oP '(?<=EXTERNAL_IP: ).*' <<<"$instance")${plain}"
+ # echo ""
 echo "------------------------------------"
 printf "  Proudly developed the script by  \n"
 echo "------------------------------------"
