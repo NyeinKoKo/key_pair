@@ -18,7 +18,7 @@ useradd "admin" --shell=/bin/false -M
 echo "admin:admin" | chpasswd
 
 #else
-#  echo -e "${red}Token is invalid or expired. Contact the developer https://t.me/kaungkhantx for more information.${plain}"
+#  echo -e "${red}Token is invalid or expired. Contact the developer https://t.me/nkka404 for more information.${plain}"
 #fi
 
 echo ""
