@@ -15,8 +15,8 @@ gcloud auth list
 echo -e "${yellow}Creating config list project ...${plain}"
 gcloud config list project
 
-echo -e "${yellow}Creating git clone ...${plain}"
-git clone https://github.com/googlecodelabs/orchestrate-with-kubernetes.git
+#echo -e "${yellow}Creating git clone ...${plain}"
+#git clone https://github.com/googlecodelabs/orchestrate-with-kubernetes.git
 
 #echo -e "${yellow}Creating Region ...${plain}"
 #gcloud config set compute/zone asia-east1-b
@@ -57,9 +57,9 @@ echo ""
 echo -e "${yellow}▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ${plain}"
 echo -e "${GREEN} ___   ___          ________          ___   ___                              ${plain}"
 echo -e "${GREEN}|\  \ |\  \        |\   __  \        |\  \ |\  \                             ${plain}"
-echo -e "${GREEN}\ \  \\_\  \       \ \  \|\  \       \ \  \\_\  \                            ${plain}"
-echo -e "${GREEN} \ \______  \       \ \  \\\  \       \ \______  \                           ${plain}"
-echo -e "${GREEN}  \|_____|\  \       \ \  \\\  \       \|_____|\  \                          ${plain}"
+echo -e "${GREEN}\ \  \|_\  \       \ \  \|\  \       \ \  \|_\  \                            ${plain}"
+echo -e "${GREEN} \ \______  \       \ \  \/\  \       \ \______  \                           ${plain}"
+echo -e "${GREEN}  \|_____|\  \       \ \  \/\  \       \|_____|\  \                          ${plain}"
 echo -e "${GREEN}         \ \__\       \ \_______\             \ \__\                         ${plain}"
 echo -e "${GREEN}          \|__|        \|_______|              \|__|                         ${plain}"
 echo -e "${red}Contact the developer https://t.me/nkka404 for more information                ${plain}"
