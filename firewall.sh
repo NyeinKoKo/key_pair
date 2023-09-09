@@ -9,29 +9,29 @@ plain='\033[0m'
 # if [[ -n $1 ]] && [[ $2 == e2-* ]] && [[ -n $3 ]] && [[ -n $4 ]] && [[ -n $8 ]] && [[ $(($(date +%s) - $8)) -lt 120 ]] && [[ $(($(date +%s) - $8)) -ge 0 ]]; then
 #if [[ -n cluster-404-m ]] && [[ $2 == e2-standard-4 ]] && [[ -n asia-southeast1-b ]] && [[ -n firewall ]] && [[ -n 404 ]] && [[ $(($(date +%s) - 404)) -lt 120 ]] && [[ $(($(date +%s) - 404)) -ge 0 ]]; then
 
-echo -e "${yellow}Creating auth list ...${plain}"
-gcloud auth list
+#echo -e "${yellow}Creating auth list ...${plain}"
+#gcloud auth list
 
-echo -e "${yellow}Creating config list project ...${plain}"
-gcloud config list project
+#echo -e "${yellow}Creating config list project ...${plain}"
+#gcloud config list project
 
 #echo -e "${yellow}Creating git clone ...${plain}"
 #git clone https://github.com/googlecodelabs/orchestrate-with-kubernetes.git
 
 #echo -e "${yellow}Creating Region ...${plain}"
 #gcloud config set compute/zone asia-east1-b
-echo -e "${yellow}▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬${plain}"
-echo -e "${GREEN}     / |         ————————————            / |                                ${plain}"
-echo -e "${GREEN}    /  |        |            |          /  |                                ${plain}"
-echo -e "${GREEN}   /   |        |            |         /   |                                ${plain}"
-echo -e "${GREEN}  /    |        |            |        /    |                                ${plain}"
-echo -e "${GREEN} /     |        | t.me/Pmttg |       /     |                                ${plain}"
-echo -e "${GREEN}/ ____ |___     |            |      / ———— |————                            ${plain}"
-echo -e "${GREEN}       |        |            |             |                                ${plain}"
-echo -e "${GREEN}       |         ————————————              |                                ${plain}"
-echo -e "${red}Contact the developer https://t.me/nkka404 for more information               ${plain}"
-echo -e "${yellow}▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬${plain}"
-echo ""
+#echo -e "${yellow}▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬${plain}"
+#echo -e "${GREEN}     / |         ————————————            / |                                ${plain}"
+#echo -e "${GREEN}    /  |        |            |          /  |                                ${plain}"
+#echo -e "${GREEN}   /   |        |            |         /   |                                ${plain}"
+#echo -e "${GREEN}  /    |        |            |        /    |                                ${plain}"
+#echo -e "${GREEN} /     |        | t.me/Pmttg |       /     |                                ${plain}"
+#echo -e "${GREEN}/ ____ |___     |            |      / ———— |————                            ${plain}"
+#echo -e "${GREEN}       |        |            |             |                                ${plain}"
+#echo -e "${GREEN}       |         ————————————              |                                ${plain}"
+#echo -e "${red}Contact the developer https://t.me/nkka404 for more information               ${plain}"
+#echo -e "${yellow}▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬${plain}"
+#echo ""
 #echo -e "${yellow}Creating instance ...${plain}"
 #instance=$(gcloud container clusters create bootcamp --image-type "UBUNTU_CONTAINERD" --num-nodes 5 --scopes "https://www.googleapis.com/auth/projecthosting,storage-rw")
 #echo -e "${green}Instance created.${plain}"
